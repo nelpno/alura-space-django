@@ -1,0 +1,31 @@
+
+maquina virtual venv sempre
+virtualenv venv
+venv\scripts\activate
+
+pip freeze > requirements.txt # SEMPRE QUE INSTALAR ALGUMA BIBLIOTECA
+
+
+install django
+
+abrir o projeto
+startproject setup . 
+
+retirar a key do settings e criar aquivo:
+
+- .env com SECRET_KEY sem string
+
+puxar no settings
+from pathlib import Path, os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+- configurar SECRET_KEY = SECRET_KEY = str(os.getenv('SECRET_KEY'))
+
+primeiro app 
+python manager.py startapp 
+
+configurar o app no arquivo settings.py -> 'galeria',
+
+dentro do app view a respeito da visibilidade
